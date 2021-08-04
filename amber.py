@@ -6,10 +6,7 @@ import requests
 
 def archive_request(url: str):
     print(f"request {url}")
-    requests.post(f"https://web.archive.org/save/{url}", data={
-        'url': url,
-        'capture_all': 'on'
-    })
+    requests.get(f"https://web.archive.org/save/{url}")
 
 
 def archive(target: str):
